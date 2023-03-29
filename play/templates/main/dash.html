@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  {% load static %}
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+  <link href="/play/static/DASH.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Dashboard</h1>
+    <div class="icons-container">
+      <div class="icon">
+       <a href="/track"><img src="/play/static/track.png" alt="Track Number"> </a>
+        <div class="overlay">
+          <h3>Track Number</h3>
+          <p>A tracking number is not just a number, it's a journey.</p>
+        </div>
+      </div>
+      <div class="icon">
+      <a href="/square_run"><img src="/play/static/square.jpg" alt="Falling Cube"></a>
+        <div class="overlay">
+          <h3>Falling Cube</h3>
+          <p>A fun and addictive game to pass the time.</p>
+        </div>
+      </div>
+      <div class="icon">
+
+       <a href="/notes"><img src="/play/static/78686.png" alt="Notepad"> </a>
+        <div class="overlay">
+          <h3>Notepad</h3>
+          <p>Take notes and keep track of your ideas.</p>
+        </div>
+      </div>
+      <div class="icon">
+        <a href="/todo"><img src="/play/static/28812967.jpg" alt="To-Do-List"></a>
+        <div class="overlay">
+          <h3>To-Do List</h3>
+          <p>Stay organized and on top of your tasks.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="signout-container" style="text-align: end; padding-right: 80px; padding-top: 200px;">
+    <a href="/signout">Sign Out</a>
+  </div>
+</body>
+
+</html>

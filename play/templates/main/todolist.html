@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>To-Do List</title>
+    {% load static %}
+    <link rel="stylesheet" href="/play/static/styleto.css">
+    <style>
+      body {
+        background-image: url("/play/static/td.jpg");
+        background-size: cover;
+    
+      }
+    </style>
+    <div style="text-align: right;">
+ 
+      <a href="/dash"><button style="background-color: rgb(204, 204, 247); margin: auto; border-radius: 3px;" type="submit">Dashboard</button></a>
+    </div>
+  </head>
+  <body>
+    <div class="container">
+      <h1>To-Do List</h1>
+      <div id="todo-list">
+        <form id="add-todo-form" action="{% url 'add_todo' %}" method="post">
+          {% csrf_token %}
+          <label for="todo-input">New To-Do Item</label>
+          <input type="text" id="todo-input" name="data" required />
+          <button type="submit">Add</button>
+        </form>
+      </div>
+      <form action="deleteall/">
+      <button id="delete-all-button">Delete All</button>
+    </form>
+    </div>
+    <div>
+      
+      <ul>
+        {% for todo_item in todo_items %}
+        {% if todo_item.user == request.user %}
+        <li>
+            <p>{{todo_item.text}}</p>
+            <div class="float-right">
+             <form action="{% url 'delete_todo' todo_item.id %}" method="post">
+             {% csrf_token %}
+             <div id="right">
+             <button type="submit">delete</button>
+            </div>
+            </form> 
+          </div>
+        </li>
+        {% endif %}
+        {% endfor %}  
+      </ul
+    </div>
+   
+  </body>
+</html>

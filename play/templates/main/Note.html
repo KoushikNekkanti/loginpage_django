@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>NOTES</title>
+  {% load static %}
+    <link rel="stylesheet" href="/play/static/Note.css">
+  <style>
+    body {
+      background-image: url("/play/static/msg1626031570-977.jpg");
+      background-size: cover;
+      
+    }
+  </style>
+  <div style="text-align: right;">
+ 
+  <a href="/dash"><button style="background-color: rgb(204, 204, 247); margin: auto; border-radius: 3px;" type="submit">Dashboard</button></a>
+</div>
+</head>
+
+<body>
+  {% csrf_token %}
+  <div class="notes-container">
+    <h1>NOTES</h1>
+    <form class="notes-form" action="add_notes/" method="post">
+      {% csrf_token %}
+      <textarea name="notes" placeholder="Add your notes here">{{var}}</textarea>
+      <button type="submit">Save</button>
+    </form>
+    <ul class="notes-list">
+      {% for i in notes_list %}
+      {% if i.user == request.user %}
+      <li>
+        <div id="h">
+        <p style="font-size:20px">{{i.text}}</p>
+      </div>
+        <div class="note-actions">
+          <form action="edit_notes/{{i.text}}/{{i.id}}">
+          <button class="edit-button">Edit</button>
+        </form>
+          <form action="delete_notes/{{i.id}}">
+          <button class="delete-button">Delete</button>
+          </form>
+        </div>
+      </li>
+      {% endif %}
+      {% endfor %}  
+    </ul>
+  </div>
+</body>
+
+</html>

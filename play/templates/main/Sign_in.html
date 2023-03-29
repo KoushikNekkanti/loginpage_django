@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sign In</title>
+  {% load static %}
+  <link rel="stylesheet" href="/play/static/Signinn.css">
+</head>
+
+<body>
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags}} alert-dismissible fade show" role:"alert" style="padding-top: 50px;text-align: center;color: aliceblue;">
+      <strong>Alert-</strong> {{ message }}
+            <span aria-hidden="true">&times;</span>
+      </button>
+      </div>
+      {% endfor %}
+  <div class="container">
+    <div class="card">
+      <h2>Sign in</h2>
+      <form method="post">
+        {% csrf_token %}
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" name="remember" value="1"> Remember me</label>
+        </div>
+        <input type="submit" value="Sign In">
+      </form>
+      <div class="links">
+        <a href="/forget">Forgot password?</a>
+        <a href="/signup">Create account</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

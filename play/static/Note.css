@@ -1,0 +1,111 @@
+/* Style for the notes container */
+.notes-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+ /** background-image: url(/play/static/msg1626031570-977.jpg);**/
+  background-color: transparent;
+  background-size: cover;
+  
+position: center;
+
+max-width: 100%;
+max-height: 100%;
+  
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the notes heading */
+.notes-container h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+/* Style for the notes form */
+.notes-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+/* Style for the notes text area */
+.notes-form textarea {
+  height: 150px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f7f7f7;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Style for the notes form submit button */
+.notes-form button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #008080;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Style for the notes list */
+.notes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style for each note item */
+.notes-list li {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Style for the note title */
+.notes-list li h2 {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* Style for the note content */
+.notes-list li p {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* Style for the note actions */
+.notes-list li .note-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Style for the edit button */
+.notes-list li .edit-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(38, 117, 235);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Style for the delete button */
+.notes-list li .delete-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #dc3545;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+ 

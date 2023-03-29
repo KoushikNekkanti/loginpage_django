@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Track Number</title>
+    {% load static %}
+  <link rel="stylesheet" href="/play/static/styletr.css">
+  <div style="text-align: right;">
+ 
+    <a href="/dash"><button style="background-color: rgb(204, 204, 247); margin: auto; border-radius: 3px;" type="submit">Dashboard</button></a>
+  </div>
+  </head>
+  <body>
+    <div>
+    <div class="container">
+      <h1>Track Number</h1>
+      <form id="track-form" method="post">
+        {% csrf_token %}
+        <label for="name-input">Name</label>
+        <input type="text" id="name-input" placeholder="Name" name="name-input" required />
+        <label for="phone-input">Phone Number</label>
+        <input type="text" id="phone-input" placeholder="Enter Number with Country Code" name="phone-input" required />
+        <button type="submit">Track</button>
+      </form>
+    </div>
+</div>
+    <div id="m">
+    <ul class="list-group">
+        <div>
+      <li class="list-group-item"> Country Name : {{cn}}</li>
+    </div>
+    <div>
+      <li class="list-group-item"> Time Zone : {{tz}}</li>
+    </div>
+    <div>
+      <li class="list-group-item"> Service Name :{{sn}}</li>
+</div>
+
+    </ul>
+  </div>
+  
+  </body>
+</html>

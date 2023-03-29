@@ -1,0 +1,101 @@
+#myCanvas {
+  width: 100%;
+  height: 10vh;
+}
+
+body {
+  background-color: lavender;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #d3d3d3;
+  background-color: #f1f1f1;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+
+.accelerate-button {
+  background-color: green;
+  border-radius: 7px;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.up-button {
+  background-color: black;
+  border-radius: 7px;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.down-button {
+  background-color: black;
+  color: #ffffff;
+  border-radius: 7px;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  #myCanvas {
+    height: 5vh;
+  }
+  
+  .buttons-container {
+    height: 10vh;
+  }
+  
+  .accelerate-button,
+  .up-button,
+  .down-button {
+    padding: 3vw 5vw;
+    margin-right: 3vw;
+    font-size: 3vw;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .buttons-container {
+    height: 15vh;
+  }
+  
+  .accelerate-button,
+  .up-button,
+  .down-button {
+    padding: 4vw 5vw;
+    margin-right: 4vw;
+    font-size: 4vw;
+  }
+}
+ 
+@media (hover: none) {
+  .accelerate-button:hover,
+  .up-button:hover,
+  .down-button:hover {
+    background-color: #666666;
+  }
+  
+  .accelerate-button:active,
+  .up-button:active,
+  .down-button:active {
+    background-color: #333333;
+  }
+}
