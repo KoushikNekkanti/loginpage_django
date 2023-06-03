@@ -35,7 +35,14 @@ Open VS and open the folder which you saved then in the terminal run these comma
 ```bash
   python manage.py runserver
 ```
+## Note
+To send email verification, You have to create an new dedicated Microsoft outlook mail.
 
+Then open web directory then open info.py file then edit 
+
+EMAIL_HOST_USER= New Created mail address
+
+EMAIL_HOST_PASSWORD= Password of your new email
 
 ## Screenshots
 Welcome page
@@ -84,5 +91,6 @@ Todo List
  
 ![Screenshot 2023-04-06 182006](https://github.com/KoushikNekkanti/loginpage_django/assets/110541440/6987cd7e-e3f2-48ef-a60b-46997eff0bae)
 
+## Thank you
  
 
