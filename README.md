@@ -1,7 +1,7 @@
 
 # loginpage_django
 
- Hello!
+Hello!
  
 I have done this for my cloud project.
 
@@ -45,10 +45,11 @@ EMAIL_HOST_USER= New Created mail address
 EMAIL_HOST_PASSWORD= Password of your new email
 
 ## Screenshots
+These are the sample Screenshots
+
 Welcome page
 
-
-![Screenshot (34)](https://github.com/KoushikNekkanti/loginpage_django/assets/110541440/ec6092e5-1c01-4923-b98b-8f84438ceb13)
+![Screenshot (30)](https://github.com/KoushikNekkanti/loginpage_django/assets/110541440/df973675-68f2-425a-a6a2-06df5dcfbd0b)
 
 Login page
 
@@ -62,7 +63,8 @@ SignUp page
 
 Dashboard
 
-![Screenshot (30)](https://github.com/KoushikNekkanti/loginpage_django/assets/110541440/df973675-68f2-425a-a6a2-06df5dcfbd0b)
+![Screenshot (34)](https://github.com/KoushikNekkanti/loginpage_django/assets/110541440/ec6092e5-1c01-4923-b98b-8f84438ceb13)
+
 
 Game
 
