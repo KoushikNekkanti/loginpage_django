@@ -3,7 +3,6 @@
 
 Hello!
  
-I have done this for my cloud project.
 
 This include an login page and 4 applications of Location tracking via Phone number, a small html game, todolist and Notepad.
 
